@@ -40,6 +40,7 @@ extension Category {
     }
   }
 }
+
 struct CategoryModel: Decodable {
   let title: String
   let emojis: [EmojiModel]
