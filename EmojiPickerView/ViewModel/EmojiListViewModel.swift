@@ -5,11 +5,15 @@
 //  Created by Vido Shaweddy on 2/7/21.
 //
 
+import Combine
 import Foundation
 
-final class EmojiListViewModel {
-  var emojiList = [CategoryModel]()
+final class EmojiListViewModel: ObservableObject {
+  var categories = [CategoryModel]()
+  var searchResults = [EmojiModel]()
   let queue = DispatchQueue(label: "com.emojiview.decode")
+  let emojiTrie = Trie()
+  @Published var isSearching = false
 
   init() {
     queue.async { [weak self] in
@@ -18,9 +22,22 @@ final class EmojiListViewModel {
                                 type: [CategoryModel].self)
       else { return }
 
-      self.emojiList = res
+      self.categories = res
+
+      for category in self.categories {
+        category.emojis.forEach { [weak self] model in
+          self?.emojiTrie.insert(model)
+        }
+      }
     }
   }
+
+  func search(_ text: String) {
+    searchResults = emojiTrie.search(text)
+    isSearching = true
+  }
+
+  // MARK: - Private
 
   private func loadJson<E: Decodable>(fileName: String, type: E.Type) -> E? {
     let decoder = JSONDecoder()

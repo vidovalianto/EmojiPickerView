@@ -18,6 +18,13 @@
 		E474AAD225D0DE000004D72C /* String+EmojiCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AAD125D0DE000004D72C /* String+EmojiCodable.swift */; };
 		E474AAD725D0DF180004D72C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AAD625D0DF180004D72C /* Constant.swift */; };
 		E474AAF525D4E19B0004D72C /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = E474AAF425D4E19B0004D72C /* emoji.json */; };
+		E474AAF925D5905D0004D72C /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AAF825D5905D0004D72C /* Trie.swift */; };
+		E474AAFD25D594BA0004D72C /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AAFC25D594BA0004D72C /* Heap.swift */; };
+		E474AB0125D5C1E60004D72C /* EmojiPickerViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AB0025D5C1E60004D72C /* EmojiPickerViewController+CollectionView.swift */; };
+		E474AB0925D5C61F0004D72C /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AB0525D5C61F0004D72C /* SegmentedControl.swift */; };
+		E474AB0A25D5C61F0004D72C /* SegmentedControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AB0625D5C61F0004D72C /* SegmentedControlCell.swift */; };
+		E474AB1425D5D0410004D72C /* EmojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AB1325D5D0410004D72C /* EmojiViewModel.swift */; };
+		E474AB1825D5D21C0004D72C /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E474AB1725D5D21C0004D72C /* EmojiCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		E474AAD125D0DE000004D72C /* String+EmojiCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EmojiCodable.swift"; sourceTree = "<group>"; };
 		E474AAD625D0DF180004D72C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E474AAF425D4E19B0004D72C /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
+		E474AAF825D5905D0004D72C /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		E474AAFC25D594BA0004D72C /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		E474AB0025D5C1E60004D72C /* EmojiPickerViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiPickerViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		E474AB0525D5C61F0004D72C /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		E474AB0625D5C61F0004D72C /* SegmentedControlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlCell.swift; sourceTree = "<group>"; };
+		E474AB1325D5D0410004D72C /* EmojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewModel.swift; sourceTree = "<group>"; };
+		E474AB1725D5D21C0004D72C /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E474AAB825D0D99C0004D72C /* EmojiPickerViewController.swift */,
+				E474AB0025D5C1E60004D72C /* EmojiPickerViewController+CollectionView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -120,6 +135,8 @@
 		E474AAB725D0D9720004D72C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E474AB1725D5D21C0004D72C /* EmojiCell.swift */,
+				E474AB0425D5C61F0004D72C /* SegmentedControl */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +146,8 @@
 			children = (
 				E474AABD25D0D9F70004D72C /* EmojiModel.swift */,
 				E474AAC325D0DA020004D72C /* CategoryModel.swift */,
+				E474AAF825D5905D0004D72C /* Trie.swift */,
+				E474AAFC25D594BA0004D72C /* Heap.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				E474AAC825D0DD100004D72C /* EmojiListViewModel.swift */,
+				E474AB1325D5D0410004D72C /* EmojiViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,6 +184,15 @@
 				E474AAF425D4E19B0004D72C /* emoji.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		E474AB0425D5C61F0004D72C /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				E474AB0525D5C61F0004D72C /* SegmentedControl.swift */,
+				E474AB0625D5C61F0004D72C /* SegmentedControlCell.swift */,
+			);
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +305,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E474AAFD25D594BA0004D72C /* Heap.swift in Sources */,
 				E474AAB325D0D91F0004D72C /* EmojiPickerView.swift in Sources */,
+				E474AB0925D5C61F0004D72C /* SegmentedControl.swift in Sources */,
+				E474AAF925D5905D0004D72C /* Trie.swift in Sources */,
 				E474AAC925D0DD100004D72C /* EmojiListViewModel.swift in Sources */,
 				E474AAD225D0DE000004D72C /* String+EmojiCodable.swift in Sources */,
+				E474AB1425D5D0410004D72C /* EmojiViewModel.swift in Sources */,
+				E474AB0A25D5C61F0004D72C /* SegmentedControlCell.swift in Sources */,
+				E474AB1825D5D21C0004D72C /* EmojiCell.swift in Sources */,
 				E474AAC425D0DA020004D72C /* CategoryModel.swift in Sources */,
 				E474AAD725D0DF180004D72C /* Constant.swift in Sources */,
 				E474AAB925D0D99C0004D72C /* EmojiPickerViewController.swift in Sources */,
+				E474AB0125D5C1E60004D72C /* EmojiPickerViewController+CollectionView.swift in Sources */,
 				E474AABE25D0D9F70004D72C /* EmojiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

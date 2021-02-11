@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct EmojiModel: Decodable {
+struct EmojiModel: Decodable, Hashable {
   let no: Int
   let code: String
   let emoji: String
   let description: String
   let flagged: Bool
+  let keywords: [String]
 }

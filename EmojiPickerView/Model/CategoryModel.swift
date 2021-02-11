@@ -41,7 +41,8 @@ extension Category {
   }
 }
 
-struct CategoryModel: Decodable {
+struct CategoryModel: Hashable, Identifiable, Decodable {
+  var id = UUID()
   let title: String
   let emojis: [EmojiModel]
 }
