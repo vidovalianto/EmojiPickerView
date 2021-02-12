@@ -15,23 +15,27 @@ class EmojiCell: UICollectionViewCell {
 
   var viewModel: ViewModel?
 
-  private lazy var emojiButton = UIButton(primaryAction:
-                                      UIAction(title: "Unknown",
-                                               discoverabilityTitle: "Emoji Icon",
-                                               handler: { [weak self] _ in
-                                                guard let self = self, let emoji = self.viewModel?.model.emoji else { return }
-                                                self.viewModel?.primaryAction(emoji)
-                                               }))
+  private lazy var emojiButton: UIButton = {
+    let action = UIAction(title: viewModel?.model.emoji ?? "Unknown",
+                          discoverabilityTitle: viewModel?.model.description ?? "Emoji Icon",
+                          handler: { [weak self] _ in
+                           guard let self = self, let emoji = self.viewModel?.model.emoji else { return }
+                           self.viewModel?.primaryAction(emoji)
+                          })
+    let button = UIButton(primaryAction: action)
+    button.titleLabel?.font = .systemFont(ofSize: 40)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
 
   func configure(_ viewModel: ViewModel) {
     self.viewModel = viewModel
-    self.contentView.addSubview(emojiButton)
+    contentView.addSubview(emojiButton)
     NSLayoutConstraint.activate([
-      self.emojiButton.topAnchor.constraint(equalTo: contentView.topAnchor),
-      self.emojiButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-      self.emojiButton.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-      self.emojiButton.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-      self.emojiButton.widthAnchor.constraint(equalTo: self.heightAnchor)
+      self.emojiButton.heightAnchor.constraint(equalToConstant: min(self.bounds.width, self.bounds.height)),
+      self.emojiButton.widthAnchor.constraint(equalTo: self.heightAnchor),
+      self.emojiButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+      self.emojiButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
     ])
     self.contentView.layer.cornerRadius = self.bounds.height/2
   }

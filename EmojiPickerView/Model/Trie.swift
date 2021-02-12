@@ -8,14 +8,12 @@
 import Foundation
 
 class Trie {
-  let head: Node
+  private let head: Node
 
-  init() {
-    head = Node()
-  }
+  init() { head = Node() }
 
   func search(_ word: String) -> [EmojiModel] {
-    let keywords = word.split(separator: " ")
+    let keywords = word.lowercased().split(separator: " ")
     var res = Set<EmojiModel>()
     var count = [EmojiModel: Int]()
 
@@ -37,7 +35,7 @@ class Trie {
     var cur = head
     var prev = Set<EmojiModel>()
 
-    while let next = cur.next[word[i]], i < word.count {
+    while i < word.count, let next = cur.next[word[i]] {
       prev = next.emojis
       cur = next
       i += 1
@@ -48,7 +46,7 @@ class Trie {
 
   func insert(_ model: EmojiModel) {
     for keyword in model.keywords {
-      insert(Array(keyword), 0, model)
+      insert(Array(keyword.lowercased()), 0, model)
     }
   }
 
@@ -65,8 +63,7 @@ class Trie {
         cur = next
       }
 
-      cur.next[word[i]]?.emojis.insert(model)
-
+      cur.emojis.insert(model)
       i += 1
     }
   }

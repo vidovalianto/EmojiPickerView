@@ -12,6 +12,7 @@ extension EmojiPickerViewController {
     case main
   }
 
+  typealias cellRegistration = UICollectionView.CellRegistration<EmojiCell, EmojiModel>
   typealias EmojPickerCVDataSource = UICollectionViewDiffableDataSource<Section, EmojiModel>
 
   func makeCollectionView() -> UICollectionView {
@@ -20,13 +21,13 @@ extension EmojiPickerViewController {
     collectionView.alwaysBounceVertical = true
     collectionView.delaysContentTouches = false
     collectionView.backgroundColor = UIColor.systemGroupedBackground
+    collectionView.translatesAutoresizingMaskIntoConstraints = false
     return collectionView
   }
 
   private func makeCollectionViewLayout() -> UICollectionViewLayout {
     UICollectionViewCompositionalLayout { _, _ in
-      return
-        NSCollectionLayoutSection
+      return NSCollectionLayoutSection
         .makeThreeColumnGridLayoutSection()
     }
   }
@@ -35,23 +36,20 @@ extension EmojiPickerViewController {
   func makeDataSource(for collectionView: UICollectionView) -> EmojPickerCVDataSource {
     return EmojPickerCVDataSource(
       collectionView: collectionView,
-      cellProvider: { view, indexPath, item in
-        guard let cell = view.dequeueReusableCell(withReuseIdentifier: Self.cellId, for: indexPath) as? EmojiCell else {
-          fatalError()
-        }
-
-        cell.viewModel = EmojiCell.ViewModel(model: item,
-                                             primaryAction: { [weak self] emoji in
-                                              self?.delegate?.buttonDidClicked(emoji)
-                                             })
-        return cell
-      }
+      cellProvider: makeCellProvider()
     )
   }
 
   /// Setup tableview settings and datasource
   func setup(_ collectionView: UICollectionView, dataSource: EmojPickerCVDataSource) {
     collectionView.dataSource = dataSource
+    self.view.addSubview(collectionView)
+    NSLayoutConstraint.activate([
+      collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+      collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+      collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
+    ])
   }
 
   /// Update tableview when there are changes to the data
@@ -60,6 +58,22 @@ extension EmojiPickerViewController {
     snapshot.appendSections([.main])
     snapshot.appendItems(items, toSection: .main)
     dataSource.apply(snapshot, animatingDifferences: animating)
+  }
+
+  private func makeCellProvider() -> (UICollectionView, IndexPath, EmojiModel) -> UICollectionViewCell {
+
+    let itemCellRegistration = cellRegistration { view, indexPath, item in
+      let viewModel = EmojiCell.ViewModel(model: item,
+                                           primaryAction: { [weak self] emoji in
+                                            self?.delegate?.buttonDidClicked(emoji)
+                                           })
+      view.configure(viewModel)
+    }
+
+    return { collectionView, indexPath, item in
+      return collectionView.dequeueConfiguredReusableCell(
+        using: itemCellRegistration, for: indexPath, item: item)
+    }
   }
 }
 
@@ -76,7 +90,7 @@ extension NSCollectionLayoutSection {
       trailing: 16
     )
   )
-    -> NSCollectionLayoutSection
+  -> NSCollectionLayoutSection
   {
     let numberOfColumns = 3
     let interItemSpacing: CGFloat = 16

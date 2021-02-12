@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 final class EmojiListViewModel: ObservableObject {
-  var categories = [CategoryModel]()
+  @Published var categories = [CategoryModel]()
   var searchResults = [EmojiModel]()
   let queue = DispatchQueue(label: "com.emojiview.decode")
   let emojiTrie = Trie()
@@ -22,12 +22,14 @@ final class EmojiListViewModel: ObservableObject {
                                 type: [CategoryModel].self)
       else { return }
 
-      self.categories = res
-
-      for category in self.categories {
+      for category in res {
         category.emojis.forEach { [weak self] model in
           self?.emojiTrie.insert(model)
         }
+      }
+
+      DispatchQueue.main.async {
+        self.categories = res
       }
     }
   }
@@ -43,14 +45,20 @@ final class EmojiListViewModel: ObservableObject {
     let decoder = JSONDecoder()
     guard
       let url = Bundle.main.url(forResource: fileName,
-                                withExtension: "json"),
-      let data = try? Data(contentsOf: url),
-      let res = try? decoder.decode(type,
-                                    from: data)
+                                withExtension: "json")
     else {
       return nil
     }
 
-    return res
+    do {
+      let data = try Data(contentsOf: url)
+      let res = try decoder.decode(type,
+                                  from: data)
+      return res
+    } catch {
+      print(error)
+    }
+
+    return nil
   }
 }

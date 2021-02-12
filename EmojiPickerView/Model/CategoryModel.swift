@@ -45,4 +45,14 @@ struct CategoryModel: Hashable, Identifiable, Decodable {
   var id = UUID()
   let title: String
   let emojis: [EmojiModel]
+
+  enum CodingKeys: CodingKey {
+    case title, emojis
+  }
+
+  init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    self.title = try container.decode(String.self, forKey: .title)
+    self.emojis = try container.decode([EmojiModel].self, forKey: .emojis)
+  }
 }

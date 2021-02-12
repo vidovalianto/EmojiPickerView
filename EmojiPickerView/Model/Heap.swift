@@ -33,10 +33,6 @@ struct Heap<E: Hashable, T: Comparable> {
     return data.first
   }
 
-  func isRoot(_ index: Int) -> Bool {
-    return (index == 0)
-  }
-
   func leftChildIndex(of index: Int) -> Int {
     return (2 * index) + 1
   }
@@ -60,7 +56,9 @@ struct Heap<E: Hashable, T: Comparable> {
     let leftChild = leftChildIndex(of: i)
     let rightChild = rightChildIndex(of: i)
 
-    guard var parentCount = comparator[data[parent]] else { return }
+    guard parent < self.data.count,
+          var parentCount = comparator[data[parent]]
+    else { return }
 
     if leftChild < self.data.count,
        let childCount = comparator[data[leftChild]],
