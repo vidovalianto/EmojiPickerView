@@ -12,7 +12,7 @@ protocol ParentViewControllerDelegate: AnyObject {
   func emojiDidClicked(emoji: String)
 }
 
-class ParentViewController: UIViewController {
+open class ParentViewController: UIViewController {
   private let searchController = UISearchController()
   private let navigationVC = UINavigationController()
   private var searchVC: EmojiPickerViewController!
@@ -29,7 +29,7 @@ class ParentViewController: UIViewController {
 
   weak var delegate: ParentViewControllerDelegate?
 
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     self.view.backgroundColor = color
 
     emojiLVM = EmojiListViewModel()
@@ -119,8 +119,9 @@ class ParentViewController: UIViewController {
     pageControl.pageIndicatorTintColor = .systemFill
     pageControl.currentPageIndicatorTintColor = .secondaryLabel
     pageControl.backgroundColor = .systemGroupedBackground
-    ["👮🏻‍♀️", "🐻", "🥤","⛰", "🚴🏻‍♂️", "💡", "⁉️", "🏳️"].enumerated().forEach { i, emoji in
-      pageControl.setIndicatorImage(emoji.image(), forPage: i)
+
+    Category.allCases.enumerated().forEach { i, category in
+      pageControl.setIndicatorImage(category.emoji.image(), forPage: i)
     }
     pageVC.pageControl?.layer.cornerRadius = 25
   }

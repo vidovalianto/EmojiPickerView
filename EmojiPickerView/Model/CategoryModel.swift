@@ -66,19 +66,19 @@ extension Category {
   var emoji: String {
     switch self {
     case .smileysAndPeople:
-        return "😀"
+        return "👮🏻‍♀️"
     case .animalsAndNature:
         return "🐻"
     case .foodAndDrink:
-        return "🍔"
+        return "🥤"
     case .activity:
-        return "⚽️"
+        return "🚴🏻‍♂️"
     case .travelAndPlaces:
-        return "🌇"
+        return "⛰"
     case .objects:
         return "💡"
     case .symbols:
-        return "🔣"
+        return "⁉️"
     case .flags:
         return "🏳️"
     }

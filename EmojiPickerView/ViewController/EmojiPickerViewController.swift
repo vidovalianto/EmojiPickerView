@@ -11,7 +11,7 @@ protocol EmojiPickerViewDelegate: AnyObject {
   func emojiDidClicked(_ emoji: String)
 }
 
-open class EmojiPickerViewController: UIViewController {
+final class EmojiPickerViewController: UIViewController {
   struct ViewModel {
     let title: String
     let emojis: [EmojiModel]
@@ -31,7 +31,7 @@ open class EmojiPickerViewController: UIViewController {
     update(dataSource: dataSource, items: viewModel.emojis)
   }
 
-  open override func viewDidLoad() {
+  override func viewDidLoad() {
     self.view.backgroundColor = color
   }
 }

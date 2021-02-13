@@ -18,7 +18,6 @@
 		E4E6129B25D84721009576F1 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6128625D84721009576F1 /* ParentViewController.swift */; };
 		E4E6129C25D84721009576F1 /* ParentViewController+PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6128725D84721009576F1 /* ParentViewController+PageViewController.swift */; };
 		E4E6129D25D84721009576F1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6128925D84721009576F1 /* Constant.swift */; };
-		E4E6129E25D84721009576F1 /* String+EmojiCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6128B25D84721009576F1 /* String+EmojiCodable.swift */; };
 		E4E6129F25D84721009576F1 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6128D25D84721009576F1 /* CategoryModel.swift */; };
 		E4E612A025D84721009576F1 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6128E25D84721009576F1 /* EmojiModel.swift */; };
 		E4E612A125D84721009576F1 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6128F25D84721009576F1 /* Trie.swift */; };
@@ -54,7 +53,6 @@
 		E4E6128625D84721009576F1 /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		E4E6128725D84721009576F1 /* ParentViewController+PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ParentViewController+PageViewController.swift"; sourceTree = "<group>"; };
 		E4E6128925D84721009576F1 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		E4E6128B25D84721009576F1 /* String+EmojiCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiCodable.swift"; sourceTree = "<group>"; };
 		E4E6128D25D84721009576F1 /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		E4E6128E25D84721009576F1 /* EmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 		E4E6128F25D84721009576F1 /* Trie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
@@ -133,8 +131,8 @@
 			children = (
 				E4E6128325D84721009576F1 /* EmojiPickerViewController.swift */,
 				E4E6128425D84721009576F1 /* EmojiPickerViewController+CollectionView.swift */,
-				E4E6128525D84721009576F1 /* ParentViewController+UISearchResultsUpdating.swift */,
 				E4E6128625D84721009576F1 /* ParentViewController.swift */,
+				E4E6128525D84721009576F1 /* ParentViewController+UISearchResultsUpdating.swift */,
 				E4E6128725D84721009576F1 /* ParentViewController+PageViewController.swift */,
 			);
 			path = ViewController;
@@ -144,17 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				E4E6128925D84721009576F1 /* Constant.swift */,
-				E4E6128A25D84721009576F1 /* Extension */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		E4E6128A25D84721009576F1 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				E4E6128B25D84721009576F1 /* String+EmojiCodable.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		E4E6128C25D84721009576F1 /* Model */ = {
@@ -310,7 +299,6 @@
 				E4E612A225D84721009576F1 /* Heap.swift in Sources */,
 				E4E6129925D84721009576F1 /* EmojiPickerViewController+CollectionView.swift in Sources */,
 				E4E6129B25D84721009576F1 /* ParentViewController.swift in Sources */,
-				E4E6129E25D84721009576F1 /* String+EmojiCodable.swift in Sources */,
 				E474AAB325D0D91F0004D72C /* EmojiPickerView.swift in Sources */,
 				E4E6129825D84721009576F1 /* EmojiPickerViewController.swift in Sources */,
 				E4E6129F25D84721009576F1 /* CategoryModel.swift in Sources */,
