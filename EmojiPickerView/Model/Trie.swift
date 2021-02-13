@@ -25,8 +25,8 @@ class Trie {
       }
     }
 
-    let heap = Heap(Array(res), count, <)
-
+    var heap = Heap(Array(res), count, <)
+    heap.heapSort()
     return heap.data
   }
 

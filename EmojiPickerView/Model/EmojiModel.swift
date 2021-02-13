@@ -8,7 +8,7 @@
 import Foundation
 
 struct EmojiModel: Decodable, Hashable {
-//  let no: Int
+  let no: Int
   let code: String
   let emoji: String
   let description: String

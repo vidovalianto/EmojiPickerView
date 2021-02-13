@@ -11,16 +11,17 @@ import XCTest
 class HeapTests: XCTestCase {
   func testHeapSortDescendingExpectedValue() {
     let data = ["😀", "🧋", "🤔", "🥲", "💁🏼‍♂️", "📲"]
-    let comparator = ["😀": 2,"🧋": 5,"🤔": 10, "🥲": 21, "💁🏼‍♂️":1, "📲": 9]
-    let heap = Heap(data, comparator, >)
-    print(heap.data)
-    XCTAssertEqual(heap.data, ["🥲", "🤔",  "📲", "🧋", "😀", "💁🏼‍♂️"].reversed())
+    let comparator = ["🥲": 21, "🤔": 10, "📲": 9, "🧋": 5, "😀": 2, "💁🏼‍♂️":1]
+    var heap = Heap(data, comparator, <)
+    heap.heapSort()
+    XCTAssertEqual(heap.data, ["🥲", "🤔",  "📲", "🧋", "😀", "💁🏼‍♂️"])
   }
   
   func testHeapSortAscendingExpectedValue() {
     let data = ["😀", "🧋", "🤔", "🥲", "💁🏼‍♂️", "📲"]
-    let comparator = ["😀": 2,"🧋": 5,"🤔": 10, "🥲": 21, "💁🏼‍♂️":1, "📲": 9]
-    let heap = Heap(data, comparator, <)
+    let comparator = ["🥲": 21, "🤔": 10, "📲": 9, "🧋": 5, "😀": 2, "💁🏼‍♂️":1]
+    var heap = Heap(data, comparator, >)
+    heap.heapSort()
     XCTAssertEqual(heap.data, ["🥲", "🤔",  "📲", "🧋", "😀", "💁🏼‍♂️"].reversed())
   }
 }

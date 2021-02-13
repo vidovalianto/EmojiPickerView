@@ -1,6 +1,6 @@
 [
     {
-      "title": "Smileys & People",
+      "title": "smileys and people",
       "emojis": [
         {
           "no": 1,
@@ -10,7 +10,8 @@
           "flagged": false,
           "keywords": [
             "face",
-            "grin"
+            "grin",
+            "happy"
           ]
         },
         {
@@ -23,7 +24,8 @@
             "eye",
             "face",
             "grin",
-            "smile"
+            "smile",
+            "happy"
           ]
         },
         {
@@ -36,7 +38,9 @@
             "face",
             "joy",
             "laugh",
-            "tear"
+            "tear",
+            "happy",
+            "lol"
           ]
         },
         {
@@ -51,7 +55,8 @@
             "laugh",
             "lol",
             "rofl",
-            "rolling"
+            "rolling",
+            "happy"
           ]
         },
         {
@@ -64,7 +69,8 @@
             "face",
             "mouth",
             "open",
-            "smile"
+            "smile",
+            "happy"
           ]
         },
         {
@@ -78,7 +84,8 @@
             "face",
             "mouth",
             "open",
-            "smile"
+            "smile",
+            "happy"
           ]
         },
         {
@@ -107,7 +114,8 @@
             "mouth",
             "open",
             "satisfied",
-            "smile"
+            "smile",
+            "happy"
           ]
         },
         {
@@ -131,7 +139,8 @@
             "blush",
             "eye",
             "face",
-            "smile"
+            "smile",
+            "happy"
           ]
         },
         {
@@ -202,7 +211,8 @@
           "flagged": false,
           "keywords": [
             "face",
-            "kiss"
+            "kiss",
+            "xxx"
           ]
         },
         {
@@ -215,7 +225,8 @@
             "eye",
             "face",
             "kiss",
-            "smile"
+            "smile",
+            "xxx"
           ]
         },
         {
@@ -228,20 +239,22 @@
             "closed",
             "eye",
             "face",
-            "kiss"
+            "kiss",
+            "xxx"
           ]
         },
         {
           "no": 18,
           "code": "U+263A",
-          "emoji": "☺",
+          "emoji": "☺️",
           "description": "WHITE SMILING FACE≊ smiling face",
           "flagged": false,
           "keywords": [
             "face",
             "outlined",
             "relaxed",
-            "smile"
+            "smile",
+            "happy"
           ]
         },
         {
@@ -252,7 +265,8 @@
           "flagged": false,
           "keywords": [
             "face",
-            "smile"
+            "smile",
+            "happy"
           ]
         },
         {
@@ -264,7 +278,8 @@
           "keywords": [
             "face",
             "hug",
-            "hugging"
+            "hugging",
+            "xo"
           ]
         },
         {
@@ -594,12 +609,13 @@
         {
           "no": 48,
           "code": "U+2639",
-          "emoji": "☹",
+          "emoji": "☹️",
           "description": "WHITE FROWNING FACE≊ frowning face",
           "flagged": false,
           "keywords": [
             "face",
-            "frown"
+            "frown",
+            "sad"
           ]
         },
         {
@@ -610,7 +626,8 @@
           "flagged": false,
           "keywords": [
             "face",
-            "frown"
+            "frown",
+            "sad"
           ]
         },
         {
@@ -3912,7 +3929,7 @@
       ]
     },
     {
-      "title": "Animals & Nature",
+      "title": "animals and nature",
       "emojis": [
         {
           "no": 620,
@@ -6241,7 +6258,7 @@
       ]
     },
     {
-      "title": "Travel & Places",
+      "title": "travel and places",
       "emojis": [
         {
           "no": 816,
@@ -8906,7 +8923,7 @@
       ]
     },
     {
-      "title": "Activities",
+      "title": "activity",
       "emojis": [
         {
           "no": 1035,
@@ -9953,7 +9970,7 @@
       ]
     },
     {
-      "title": "Objects",
+      "title": "objects",
       "emojis": [
         {
           "no": 1166,
@@ -12013,7 +12030,7 @@
       ]
     },
     {
-      "title": "Symbols",
+      "title": "symbols",
       "emojis": [
         {
           "no": 1328,
@@ -14420,7 +14437,7 @@
       ]
     },
     {
-      "title": "Flags",
+      "title": "flags",
       "emojis": [
         {
           "no": 1530,

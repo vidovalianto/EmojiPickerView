@@ -28,8 +28,16 @@ class EmojiCell: UICollectionViewCell {
     return button
   }()
 
-  func configure(_ viewModel: ViewModel) {
-    self.viewModel = viewModel
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupButton()
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  func setupButton() {
     contentView.addSubview(emojiButton)
     NSLayoutConstraint.activate([
       self.emojiButton.heightAnchor.constraint(equalToConstant: min(self.bounds.width, self.bounds.height)),
@@ -37,7 +45,15 @@ class EmojiCell: UICollectionViewCell {
       self.emojiButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
       self.emojiButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
     ])
+  }
+
+  override func layoutSubviews() {
     self.contentView.layer.cornerRadius = self.bounds.height/2
+  }
+
+  func configure(_ viewModel: ViewModel) {
+    self.viewModel = viewModel
+    self.emojiButton.setTitle(viewModel.model.emoji, for: .normal)
   }
 }
 

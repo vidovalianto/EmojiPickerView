@@ -46,7 +46,8 @@ struct Heap<E: Hashable, T: Comparable> {
   }
 
   private mutating func buildHeap() {
-    for i in (0...self.data.count/2).reversed() {
+    guard !data.isEmpty else { return }
+    for i in (0..<self.data.count/2).reversed() {
       heapify(i)
     }
   }
@@ -62,7 +63,7 @@ struct Heap<E: Hashable, T: Comparable> {
 
     if leftChild < self.data.count,
        let childCount = comparator[data[leftChild]],
-       childCount > parentCount {
+       priorityFunction(parentCount, childCount) {
       parent = leftChild
       parentCount = childCount
     }
@@ -77,5 +78,17 @@ struct Heap<E: Hashable, T: Comparable> {
       data.swapAt(parent, i)
       heapify(parent)
     }
+  }
+
+  public mutating func heapSort() {
+    var res = [E]()
+    for _ in data.indices {
+      data.swapAt(0, data.count - 1)
+      guard let val = data.popLast() else { break }
+      res.append(val)
+      heapify(0)
+    }
+
+    data = res
   }
 }

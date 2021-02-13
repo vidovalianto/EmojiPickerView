@@ -20,7 +20,7 @@ extension EmojiPickerViewController {
     collectionView.dragInteractionEnabled = true
     collectionView.alwaysBounceVertical = true
     collectionView.delaysContentTouches = false
-    collectionView.backgroundColor = UIColor.systemGroupedBackground
+    collectionView.backgroundColor = color
     collectionView.translatesAutoresizingMaskIntoConstraints = false
     return collectionView
   }
@@ -32,7 +32,7 @@ extension EmojiPickerViewController {
     }
   }
 
-  /// Create data source and assign cell to the tableview
+  /// Create data source and assign cell to the collectionview
   func makeDataSource(for collectionView: UICollectionView) -> EmojPickerCVDataSource {
     return EmojPickerCVDataSource(
       collectionView: collectionView,
@@ -40,7 +40,7 @@ extension EmojiPickerViewController {
     )
   }
 
-  /// Setup tableview settings and datasource
+  /// Setup collectionview settings and datasource
   func setup(_ collectionView: UICollectionView, dataSource: EmojPickerCVDataSource) {
     collectionView.dataSource = dataSource
     self.view.addSubview(collectionView)
@@ -52,7 +52,7 @@ extension EmojiPickerViewController {
     ])
   }
 
-  /// Update tableview when there are changes to the data
+  /// Update collectionview when there are changes to the data
   func update(dataSource: EmojPickerCVDataSource, items: [EmojiModel], animating: Bool = true) {
     var snapshot = NSDiffableDataSourceSnapshot<Section, EmojiModel>()
     snapshot.appendSections([.main])
@@ -61,11 +61,10 @@ extension EmojiPickerViewController {
   }
 
   private func makeCellProvider() -> (UICollectionView, IndexPath, EmojiModel) -> UICollectionViewCell {
-
     let itemCellRegistration = cellRegistration { view, indexPath, item in
       let viewModel = EmojiCell.ViewModel(model: item,
                                            primaryAction: { [weak self] emoji in
-                                            self?.delegate?.buttonDidClicked(emoji)
+                                            self?.delegate?.emojiDidClicked(emoji)
                                            })
       view.configure(viewModel)
     }
