@@ -9,7 +9,7 @@ import UIKit
 
 final class Constant {
   class Emoji {
-    static let size = CGSize(width: 20, height: 20)
-    static let fontSize: CGFloat = 15
+    static let size = CGSize(width: 25, height: 25)
+    static let fontSize: CGFloat = 16
   }
 }

@@ -32,7 +32,7 @@ open class EmojiPickerViewController: UIViewController {
   }
 
   open override func viewDidLoad() {
-    self.view.backgroundColor = .systemBackground
+    self.view.backgroundColor = color
   }
 }
 

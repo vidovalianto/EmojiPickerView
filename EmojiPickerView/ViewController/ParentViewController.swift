@@ -114,14 +114,15 @@ class ParentViewController: UIViewController {
 
   private func setupPageControl() {
     let pageControl = UIPageControl.appearance(whenContainedInInstancesOf: [UIPageViewController.self])
-    pageControl.backgroundStyle = .prominent
-    pageControl.numberOfPages = 7
+    pageControl.numberOfPages = 8
     pageControl.currentPage = 0
     pageControl.pageIndicatorTintColor = .systemFill
     pageControl.currentPageIndicatorTintColor = .secondaryLabel
-    ["👮🏻‍♀️", "🐻", "⛰", "🚴🏻‍♂️", "💡", "⁉️", "🏳️"].enumerated().forEach { i, emoji in
+    pageControl.backgroundColor = .systemGroupedBackground
+    ["👮🏻‍♀️", "🐻", "🥤","⛰", "🚴🏻‍♂️", "💡", "⁉️", "🏳️"].enumerated().forEach { i, emoji in
       pageControl.setIndicatorImage(emoji.image(), forPage: i)
     }
+    pageVC.pageControl?.layer.cornerRadius = 25
   }
 
   private func setupSearchController() {
@@ -164,5 +165,11 @@ private extension String {
 extension ParentViewController: EmojiPickerViewDelegate {
   func emojiDidClicked(_ emoji: String) {
     self.delegate?.emojiDidClicked(emoji: emoji)
+  }
+}
+
+private extension UIPageViewController {
+  var pageControl: UIPageControl? {
+      return view.subviews.first { $0 is UIPageControl } as? UIPageControl
   }
 }

@@ -2118,7 +2118,10 @@
           "keywords": [
             "couple",
             "kiss",
-            "romance"
+            "romance",
+            "couple",
+            "heart",
+            "love",
           ]
         },
         {
@@ -2130,7 +2133,10 @@
           "keywords": [
             "kiss",
             "man",
-            "woman"
+            "woman",
+            "couple",
+            "heart",
+            "love",
           ]
         },
         {
@@ -2141,7 +2147,10 @@
           "flagged": false,
           "keywords": [
             "kiss",
-            "man"
+            "man",
+            "couple",
+            "heart",
+            "love",
           ]
         },
         {
@@ -2152,7 +2161,10 @@
           "flagged": false,
           "keywords": [
             "kiss",
-            "woman"
+            "woman",
+            "couple",
+            "heart",
+            "love",
           ]
         },
         {
@@ -2212,7 +2224,8 @@
             "child",
             "family",
             "father",
-            "mother"
+            "mother",
+            "kid"
           ]
         },
         {
@@ -2225,7 +2238,8 @@
             "boy",
             "family",
             "man",
-            "woman"
+            "woman",
+            "kid"
           ]
         },
         {
@@ -2238,7 +2252,8 @@
             "family",
             "girl",
             "man",
-            "woman"
+            "woman",
+            "kid"
           ]
         },
         {
@@ -2252,7 +2267,10 @@
             "family",
             "girl",
             "man",
-            "woman"
+            "woman",
+            "kid",
+            "son",
+            "daughter"
           ]
         },
         {
@@ -2265,7 +2283,10 @@
             "boy",
             "family",
             "man",
-            "woman"
+            "woman",
+            "kid",
+            "son",
+            "daughter"
           ]
         },
         {
@@ -2278,7 +2299,10 @@
             "family",
             "girl",
             "man",
-            "woman"
+            "woman",
+            "kid",
+            "son",
+            "daughter"
           ]
         },
         {
@@ -2290,7 +2314,10 @@
           "keywords": [
             "boy",
             "family",
-            "man"
+            "man",
+            "kid",
+            "son",
+            "daughter"
           ]
         },
         {
@@ -2302,7 +2329,10 @@
           "keywords": [
             "family",
             "girl",
-            "man"
+            "man",
+            "kid",
+            "son",
+            "daughter"
           ]
         },
         {
@@ -2315,7 +2345,10 @@
             "boy",
             "family",
             "girl",
-            "man"
+            "man",
+            "kid",
+            "son",
+            "daughter"
           ]
         },
         {
@@ -2327,7 +2360,9 @@
           "keywords": [
             "boy",
             "family",
-            "man"
+            "man",
+            "kid",
+            "son"
           ]
         },
         {
@@ -2339,7 +2374,8 @@
           "keywords": [
             "family",
             "girl",
-            "man"
+            "man",
+            "daughter"
           ]
         },
         {
@@ -2376,7 +2412,10 @@
             "boy",
             "family",
             "girl",
-            "woman"
+            "woman",
+            "kid",
+            "son",
+            "daughter"
           ]
         },
         {
@@ -2388,7 +2427,9 @@
           "keywords": [
             "boy",
             "family",
-            "woman"
+            "woman",
+            "kid",
+            "son"
           ]
         },
         {
@@ -2400,7 +2441,9 @@
           "keywords": [
             "family",
             "girl",
-            "woman"
+            "woman",
+            "kid",
+            "daughter"
           ]
         },
         {
@@ -5148,7 +5191,11 @@
             "plant",
             "wind"
           ]
-        },
+        }]
+    },
+    {
+      "title": "food and drink",
+      "emojis": [
         {
           "no": 727,
           "code": "U+1F347",
