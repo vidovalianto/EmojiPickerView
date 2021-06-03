@@ -1,0 +1,273 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerPackageTests.xctest/Contents/MacOS/EmojiPickerViewControllerPackageTests",
+      "packageName" : "EmojiPickerViewController",
+      "productName" : "EmojiPickerViewControllerPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "swiftCommands" : {
+    "C.EmojiPickerViewController-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Helper/Constant.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/CategoryModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/EmojiModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/Heap.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/Trie.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/View/EmojiCell.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+CollectionView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+PageViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+UISearchResultsUpdating.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewModel/EmojiListViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewModel/EmojiViewModel.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "EmojiPickerViewController",
+      "moduleOutputPath" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.swiftmodule",
+      "objects" : [
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Helper/Constant.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/CategoryModel.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/EmojiModel.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/Heap.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/Trie.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/View/EmojiCell.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController+CollectionView.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController+PageViewController.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController+UISearchResultsUpdating.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiViewController.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewModel/EmojiListViewModel.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewModel/EmojiViewModel.swift.o"
+      ],
+      "otherArgs" : [
+        "-target",
+        "x86_64-apple-macosx10.10",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/index/store",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/EmojiPickerViewController-Swift.h",
+        "-color-diagnostics"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Helper/Constant.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/CategoryModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/EmojiModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/Heap.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/Model/Trie.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/View/EmojiCell.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController+CollectionView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController+PageViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController+UISearchResultsUpdating.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiPickerViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewController/EmojiViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewModel/EmojiListViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/ViewModel/EmojiViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Helper/Constant.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/CategoryModel.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/EmojiModel.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/Heap.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/Trie.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/View/EmojiCell.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+CollectionView.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+PageViewController.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+UISearchResultsUpdating.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiViewController.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewModel/EmojiListViewModel.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewModel/EmojiViewModel.swift"
+      ],
+      "tempsPath" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build",
+      "WMO" : false
+    },
+    "C.EmojiPickerViewControllerTests-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Tests/EmojiPickerViewControllerTests/EmojiPickerViewControllerTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Tests/EmojiPickerViewControllerTests/HeapTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "EmojiPickerViewControllerTests",
+      "moduleOutputPath" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerTests.swiftmodule",
+      "objects" : [
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerTests.build/EmojiPickerViewControllerTests.swift.o",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerTests.build/HeapTests.swift.o"
+      ],
+      "otherArgs" : [
+        "-target",
+        "x86_64-apple-macosx10.15",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/index/store",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-color-diagnostics"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerTests.build/EmojiPickerViewControllerTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerTests.build/HeapTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Tests/EmojiPickerViewControllerTests/EmojiPickerViewControllerTests.swift",
+        "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Tests/EmojiPickerViewControllerTests/HeapTests.swift"
+      ],
+      "tempsPath" : "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewControllerTests.build",
+      "WMO" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

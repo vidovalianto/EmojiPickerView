@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
+options: "9646c1e0fe0b1ba1d40984a3d3b21426"
+build_time: [1622758931, 429038000]
+inputs:
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Helper/Constant.swift": !dirty [1622756863, 329859147]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/CategoryModel.swift": !dirty [1622756872, 50951649]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/EmojiModel.swift": !dirty [1622756880, 789022971]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/Heap.swift": !dirty [1622756895, 363894002]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/Model/Trie.swift": !dirty [1622758038, 854889129]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/View/EmojiCell.swift": !dirty [1622756902, 300795565]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+CollectionView.swift": !dirty [1622758064, 390498410]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+PageViewController.swift": !dirty [1622757927, 825771741]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController+UISearchResultsUpdating.swift": !dirty [1622758099, 166255885]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiPickerViewController.swift": !dirty [1622758092, 813157352]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewController/EmojiViewController.swift": !dirty [1622757905, 779607295]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewModel/EmojiListViewModel.swift": !dirty [1622758263, 262486428]
+  "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/Sources/EmojiPickerViewController/ViewModel/EmojiViewModel.swift": !dirty [1622757007, 309654661]

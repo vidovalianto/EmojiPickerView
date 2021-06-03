@@ -1,0 +1,4 @@
+module EmojiPickerViewController {
+    header "/Users/vidoshaweddy/Library/Mobile Documents/com~apple~CloudDocs/Documents/IOS Development/EmojiPickerView/.build/x86_64-apple-macosx/debug/EmojiPickerViewController.build/EmojiPickerViewController-Swift.h"
+    requires objc
+}
