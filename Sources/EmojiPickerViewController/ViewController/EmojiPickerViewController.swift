@@ -8,14 +8,14 @@
 import Combine
 import UIKit
 
-protocol ParentViewControllerDelegate: AnyObject {
+protocol EmojiPickerViewControllerDelegate: AnyObject {
   func emojiDidClicked(emoji: String)
 }
 
-open class ParentViewController: UIViewController {
+public final class EmojiPickerViewController: UIViewController {
   private let searchController = UISearchController()
   private let navigationVC = UINavigationController()
-  private var searchVC: EmojiPickerViewController!
+  private var searchVC: EmojiViewController!
   private var cancellables = Set<AnyCancellable>()
 
   public var color: UIColor = .systemBackground
@@ -27,9 +27,9 @@ open class ParentViewController: UIViewController {
   var searchTask: DispatchWorkItem?
   var pendingIndex = 0
 
-  weak var delegate: ParentViewControllerDelegate?
+  weak var delegate: EmojiPickerViewControllerDelegate?
 
-  open override func viewDidLoad() {
+  public override func viewDidLoad() {
     self.view.backgroundColor = color
 
     emojiLVM = EmojiListViewModel()
@@ -45,7 +45,7 @@ open class ParentViewController: UIViewController {
       .sink { [weak self] isSearching in
         guard let self = self else { return }
         if let initialVC = self.searchVC, isSearching {
-          let viewModel = EmojiPickerViewController.ViewModel(title: "",
+          let viewModel = EmojiViewController.ViewModel(title: "",
                                                               emojis: self.emojiLVM.searchResults)
           initialVC.configure(viewModel)
           self.pageVC.setViewControllers([initialVC],
@@ -68,9 +68,9 @@ open class ParentViewController: UIViewController {
         guard let self = self else { return }
         var emojisVCIcon = [String]()
         self.emojisVC = categories.enumerated().map({ i, category -> UIViewController in
-          let vc = EmojiPickerViewController()
+          let vc = EmojiViewController()
           vc.color = self.collectionViewColor
-          let viewModel = EmojiPickerViewController.ViewModel(title: category.titleEmoji,
+          let viewModel = EmojiViewController.ViewModel(title: category.titleEmoji,
                                                               emojis: category.emojis)
           vc.configure(viewModel)
           vc.delegate = self
@@ -97,7 +97,7 @@ open class ParentViewController: UIViewController {
   }
 
   private func setupPageVC() {
-    searchVC = EmojiPickerViewController()
+    searchVC = EmojiViewController()
     searchVC.color = collectionViewColor
 
     pageVC = UIPageViewController(transitionStyle: .scroll,
@@ -163,7 +163,7 @@ private extension String {
   }
 }
 
-extension ParentViewController: EmojiPickerViewDelegate {
+extension EmojiPickerViewController: EmojiPickerViewDelegate {
   func emojiDidClicked(_ emoji: String) {
     self.delegate?.emojiDidClicked(emoji: emoji)
   }

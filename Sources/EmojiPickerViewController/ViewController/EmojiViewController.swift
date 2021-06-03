@@ -11,7 +11,7 @@ protocol EmojiPickerViewDelegate: AnyObject {
   func emojiDidClicked(_ emoji: String)
 }
 
-final class EmojiPickerViewController: UIViewController {
+final class EmojiViewController: UIViewController {
   struct ViewModel {
     let title: String
     let emojis: [EmojiModel]

@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class Constant {
-  class Emoji {
+enum Constant {
+  enum Emoji {
     static let size = CGSize(width: 25, height: 25)
     static let fontSize: CGFloat = 16
   }

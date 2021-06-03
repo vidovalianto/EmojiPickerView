@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ParentViewController: UIPageViewControllerDataSource {
+extension EmojiPickerViewController: UIPageViewControllerDataSource {
   public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
     guard let index = emojisVC.firstIndex(of: viewController) else { return nil }
     if index > 0 { return emojisVC[index - 1] }

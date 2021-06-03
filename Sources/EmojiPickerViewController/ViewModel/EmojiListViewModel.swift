@@ -12,26 +12,20 @@ final class EmojiListViewModel: ObservableObject {
   @Published var categories = [CategoryModel]()
   @Published var isSearching = false
   var searchResults = [EmojiModel]()
-  let queue = DispatchQueue(label: "com.emojiview.decode")
   let emojiTrie = Trie()
 
   init() {
-    queue.async { [weak self] in
-      guard let self = self,
-        let res = self.loadJson(fileName: "emoji",
-                                type: [CategoryModel].self)
-      else { return }
+    guard let res = self.loadJson(fileName: "emoji",
+                            type: [CategoryModel].self)
+    else { return }
 
-      for category in res {
-        category.emojis.forEach { [weak self] model in
-          self?.emojiTrie.insert(model)
-        }
-      }
-
-      DispatchQueue.main.async {
-        self.categories = res
+    for category in res {
+      category.emojis.forEach { [weak self] model in
+        self?.emojiTrie.insert(model)
       }
     }
+
+    self.categories = res
   }
 
   func search(_ text: String) {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ParentViewController: UISearchResultsUpdating {
+extension EmojiPickerViewController: UISearchResultsUpdating {
   public func updateSearchResults(for searchController: UISearchController) {
     guard let text = searchController.searchBar.text,
           !text.isEmpty || !text.replacingOccurrences(of: " ", with: "").isEmpty

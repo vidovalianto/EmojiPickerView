@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension EmojiPickerViewController {
+extension EmojiViewController {
   enum Section {
     case main
   }
@@ -76,11 +76,11 @@ extension EmojiPickerViewController {
   }
 }
 
-extension EmojiPickerViewController {
+private extension EmojiViewController {
   static let cellId = "emojiId"
 }
 
-extension NSCollectionLayoutSection {
+private extension NSCollectionLayoutSection {
   static func makeThreeColumnGridLayoutSection(
     contentInset: NSDirectionalEdgeInsets = NSDirectionalEdgeInsets(
       top: 16,

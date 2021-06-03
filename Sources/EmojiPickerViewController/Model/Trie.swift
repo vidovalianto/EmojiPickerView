@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Trie {
+final class Trie {
   private let head: Node
 
   init() { head = Node() }
@@ -30,7 +30,7 @@ class Trie {
     return heap.data
   }
 
-  func search(_ word: [Character], _ i: Int) -> Set<EmojiModel> {
+  private func search(_ word: [Character], _ i: Int) -> Set<EmojiModel> {
     var i = i
     var cur = head
     var prev = Set<EmojiModel>()
@@ -50,7 +50,7 @@ class Trie {
     }
   }
 
-  func insert(_ word: [Character], _ i: Int, _ model: EmojiModel) {
+  private func insert(_ word: [Character], _ i: Int, _ model: EmojiModel) {
     var i = i
     var cur = head
 
@@ -69,7 +69,7 @@ class Trie {
   }
 }
 
-class Node {
+private final class Node {
   var next: [Character: Node]
   var emojis: Set<EmojiModel>
 
