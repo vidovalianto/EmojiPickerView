@@ -19,6 +19,8 @@ final class EmojiListViewModel: ObservableObject {
                             type: [CategoryModel].self)
     else { return }
 
+    print(res)
+
     for category in res {
       category.emojis.forEach { [weak self] model in
         self?.emojiTrie.insert(model)
@@ -31,6 +33,7 @@ final class EmojiListViewModel: ObservableObject {
   func search(_ text: String) {
     searchResults = emojiTrie.search(text)
     isSearching = true
+    print(text, searchResults)
   }
 
   // MARK: - Private
