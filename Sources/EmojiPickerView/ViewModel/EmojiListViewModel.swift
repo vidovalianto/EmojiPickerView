@@ -15,12 +15,9 @@ final class EmojiListViewModel: ObservableObject {
   let emojiTrie = Trie()
 
   init() {
-    print("init")
     guard let res = self.loadJson(filename: "emoji",
                                   model: [CategoryModel].self)
     else { return }
-
-    print(res)
 
     for category in res {
       category.emojis.forEach { [weak self] model in
@@ -34,7 +31,6 @@ final class EmojiListViewModel: ObservableObject {
   func search(_ text: String) {
     searchResults = emojiTrie.search(text)
     isSearching = true
-    print(text, searchResults)
   }
 
   // MARK: - Private
@@ -45,8 +41,6 @@ final class EmojiListViewModel: ObservableObject {
     else {
       return nil
     }
-
-    print(path)
 
     do {
       let data = try Data(contentsOf: URL(fileURLWithPath: path))
