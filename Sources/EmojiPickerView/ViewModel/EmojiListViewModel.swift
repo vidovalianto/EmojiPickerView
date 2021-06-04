@@ -42,7 +42,7 @@ final class EmojiListViewModel: ObservableObject {
   private func loadJson<E: Decodable>(filename: String, model: E.Type) -> E? {
     let decoder = JSONDecoder()
     let bundle = Bundle(for: Self.self)
-    print(bundle)
+    print(bundle, Bundle(for: EmojiListViewModel.self), Bundle.allBundles)
     let fileManager = FileManager.default
 
     do {
