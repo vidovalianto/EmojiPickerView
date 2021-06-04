@@ -28,9 +28,11 @@ extension ViewController: EmojiPickerViewDelegate {
 ### Swift Package Manager
 Adding EmojiPickerView as a dependency is as easy as adding it to the dependencies value of your Package.swift.
 
+```
 dependencies: [
     .package(url: "https://github.com/vidovalianto/EmojiPickerView.git", .upToNextMajor(from: "1.1.0"))
 ]
+```
 
 ### Change picker view background color
 ```Swift
