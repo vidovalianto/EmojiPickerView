@@ -16,8 +16,8 @@ final class EmojiListViewModel: ObservableObject {
 
   init() {
     print("init")
-    guard let res = self.loadJson(fileName: "emoji",
-                            type: [CategoryModel].self)
+    guard let res = self.loadJson(filename: "emoji",
+                                  model: [CategoryModel].self)
     else { return }
 
     print(res)
@@ -39,18 +39,17 @@ final class EmojiListViewModel: ObservableObject {
 
   // MARK: - Private
 
-  private func loadJson<E: Decodable>(fileName: String, type: E.Type) -> E? {
+  private func loadJson<E: Decodable>(filename: String, model: E.Type) -> E? {
     let decoder = JSONDecoder()
-    let bundleURL = Bundle(for: EmojiListViewModel.self)
-    print(bundleURL.path(forResource: fileName, ofType: "json"), Bundle(for: EmojiPickerView.self).path(forResource: fileName, ofType: "json"), Bundle(for: EmojiViewController.self).path(forResource: fileName, ofType: "json"))
-    guard let urlString = bundleURL.path(forResource: fileName, ofType: "json")
+    let bundle = Bundle(for: type(of: self))
+    guard let path = bundle.path(forResource: filename, ofType: "json")
     else {
       return nil
     }
 
     do {
-      let data = try Data(contentsOf: URL(fileURLWithPath: urlString))
-      let res = try decoder.decode(type,
+      let data = try Data(contentsOf: URL(fileURLWithPath: path))
+      let res = try decoder.decode(model,
                                   from: data)
       return res
     } catch {

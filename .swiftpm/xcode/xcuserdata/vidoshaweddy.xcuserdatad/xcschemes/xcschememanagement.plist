@@ -37,6 +37,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>EmojiPickerViewTests</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
