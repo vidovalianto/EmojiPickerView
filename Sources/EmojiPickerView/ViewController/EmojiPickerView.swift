@@ -166,6 +166,7 @@ private extension String {
 extension EmojiPickerView: EmojiViewDelegate {
   func emojiDidClicked(_ emoji: String) {
     self.delegate?.emojiDidClicked(emoji: emoji)
+    self.dismiss(animated: true, completion: nil)
   }
 }
 
