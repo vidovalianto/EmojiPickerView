@@ -43,11 +43,21 @@ final class EmojiListViewModel: ObservableObject {
     let decoder = JSONDecoder()
     let bundle = Bundle(for: Self.self)
     print(bundle)
-    print(Bundle(identifier: "com.EmojiPicker"))
+    let fileManager = FileManager.default
+
+    do {
+      let docsArray = try fileManager.contentsOfDirectory(atPath: bundle.bundlePath)
+      print(docsArray)
+    } catch {
+        print(error)
+    }
+
     guard let path = bundle.path(forResource: filename, ofType: "json")
     else {
       return nil
     }
+
+    print(path)
 
     do {
       let data = try Data(contentsOf: URL(fileURLWithPath: path))
