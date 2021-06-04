@@ -41,7 +41,8 @@ final class EmojiListViewModel: ObservableObject {
 
   private func loadJson<E: Decodable>(fileName: String, type: E.Type) -> E? {
     let decoder = JSONDecoder()
-    let bundleURL = Bundle(for: EmojiPickerView.self)
+    let bundleURL = Bundle(for: EmojiListViewModel.self)
+    print(bundleURL.path(forResource: fileName, ofType: "json"), Bundle(for: EmojiPickerView.self).path(forResource: fileName, ofType: "json"), Bundle(for: EmojiViewController.self).path(forResource: fileName, ofType: "json"))
     guard let urlString = bundleURL.path(forResource: fileName, ofType: "json")
     else {
       return nil
