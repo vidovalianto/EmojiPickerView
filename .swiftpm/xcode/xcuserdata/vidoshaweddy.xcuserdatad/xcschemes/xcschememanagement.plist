@@ -17,6 +17,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EmojiPicker</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EmojiPickerView</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EmojiPickerViewController</key>
 		<dict>
 			<key>primary</key>
