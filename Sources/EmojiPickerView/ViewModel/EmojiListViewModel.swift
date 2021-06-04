@@ -41,8 +41,9 @@ final class EmojiListViewModel: ObservableObject {
 
   private func loadJson<E: Decodable>(filename: String, model: E.Type) -> E? {
     let decoder = JSONDecoder()
-    let bundle = Bundle(for: Self.self)
-    print(bundle, Bundle(for: EmojiListViewModel.self), Bundle.allBundles)
+    guard let privatePath = Bundle.main.privateFrameworksPath, let bundle = Bundle(path: privatePath) else { return nil }
+
+    print(bundle)
     let fileManager = FileManager.default
 
     do {
