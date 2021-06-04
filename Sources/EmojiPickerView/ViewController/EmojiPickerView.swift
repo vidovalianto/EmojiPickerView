@@ -8,7 +8,7 @@
 import Combine
 import UIKit
 
-protocol EmojiPickerViewControllerDelegate: AnyObject {
+public protocol EmojiPickerViewControllerDelegate: AnyObject {
   func emojiDidClicked(emoji: String)
 }
 
