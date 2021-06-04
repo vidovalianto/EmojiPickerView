@@ -12,7 +12,7 @@ protocol EmojiPickerViewControllerDelegate: AnyObject {
   func emojiDidClicked(emoji: String)
 }
 
-public final class EmojiPickerViewController: UIViewController {
+public final class EmojiPickerView: UIViewController {
   private let searchController = UISearchController()
   private let navigationVC = UINavigationController()
   private var searchVC: EmojiViewController!
@@ -163,7 +163,7 @@ private extension String {
   }
 }
 
-extension EmojiPickerViewController: EmojiPickerViewDelegate {
+extension EmojiPickerView: EmojiPickerViewDelegate {
   func emojiDidClicked(_ emoji: String) {
     self.delegate?.emojiDidClicked(emoji: emoji)
   }

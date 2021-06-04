@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import EmojiPickerView
+@testable import EmojiPickerViewController
 
 class HeapTests: XCTestCase {
   func testHeapSortDescendingExpectedValue() {
