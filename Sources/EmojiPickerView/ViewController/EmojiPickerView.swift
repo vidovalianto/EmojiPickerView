@@ -8,7 +8,7 @@
 import Combine
 import UIKit
 
-public protocol EmojiPickerViewControllerDelegate: AnyObject {
+public protocol EmojiPickerViewDelegate: AnyObject {
   func emojiDidClicked(emoji: String)
 }
 
@@ -27,7 +27,7 @@ public final class EmojiPickerView: UIViewController {
   var searchTask: DispatchWorkItem?
   var pendingIndex = 0
 
-  weak var delegate: EmojiPickerViewControllerDelegate?
+  public weak var delegate: EmojiPickerViewDelegate?
 
   public override func viewDidLoad() {
     self.view.backgroundColor = color
@@ -163,7 +163,7 @@ private extension String {
   }
 }
 
-extension EmojiPickerView: EmojiPickerViewDelegate {
+extension EmojiPickerView: EmojiViewDelegate {
   func emojiDidClicked(_ emoji: String) {
     self.delegate?.emojiDidClicked(emoji: emoji)
   }

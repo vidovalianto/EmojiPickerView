@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol EmojiPickerViewDelegate: AnyObject {
+protocol EmojiViewDelegate: AnyObject {
   func emojiDidClicked(_ emoji: String)
 }
 
@@ -17,7 +17,7 @@ final class EmojiViewController: UIViewController {
     let emojis: [EmojiModel]
   }
 
-  weak var delegate: EmojiPickerViewDelegate?
+  weak var delegate: EmojiViewDelegate?
 
   private(set) lazy var collectionView = makeCollectionView()
   private lazy var dataSource = makeDataSource(for: collectionView)
