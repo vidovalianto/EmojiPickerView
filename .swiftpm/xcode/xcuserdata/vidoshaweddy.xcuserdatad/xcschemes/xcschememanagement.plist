@@ -42,6 +42,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>EmojiPicker_EmojiPickerView</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
