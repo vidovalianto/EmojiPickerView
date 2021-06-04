@@ -3,6 +3,8 @@
 Emoji picker view for iOS 📲🍎
 A library to enforce user to pick an emoji 😃👍.
 
+Demo: https://github.com/vidovalianto/EmojiApp
+
 ## Requirements
 * iOS 14.0+
 * Swift 5.0+
